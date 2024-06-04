@@ -1,0 +1,61 @@
+@use "sass:map";
+@import "style/pages/theme";
+
+.header__top {
+  background: #f5f5f5;
+}
+
+.header__top_right {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  ul {
+    display: flex;
+    column-gap: 4px;
+    list-style: none; // bo dau tron
+    padding: 10px 0 13px;
+    a {
+      font-size: 14px;
+      display: inline-block;
+      color: map.get($theme-colors, "normal-text");
+    }
+    li:last-child {
+      cursor: pointer;
+      margin-left: 10px;
+      span {
+        font-size: 14px;
+        margin-left: 2px;
+      }
+    }
+  }
+}
+
+.header__top_left {
+  ul {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 13px;
+    list-style: none;
+    column-gap: 10px;
+  }
+  li {
+    font-size: 14px;
+    color: map.get($theme-colors, "normal-text");
+    display: flex;
+    align-items: center;
+    column-gap: 2px;
+  }
+  li:first-child {
+    position: relative;
+    &::after {
+      position: absolute;
+      right: -25px;
+      top: 1px;
+      height: 20px;
+      width: 1px;
+      background: #000000;
+      opacity: 0.1;
+      content: "";
+    }
+  }
+}
