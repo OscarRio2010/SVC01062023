@@ -5,6 +5,7 @@ import {
   AiOutlineInstagram,
   AiOutlineLinkedin,
   AiOutlineMail,
+  AiOutlineMenu,
   AiOutlineShoppingCart,
   AiOutlineTwitter,
   AiOutlineUser,
@@ -13,6 +14,7 @@ import { Link } from "react-router-dom";
 import { formatter } from "utils/fomater";
 import { ROUTERS } from "utils/router";
 const Header = () => {
+  const [isShowCategories, setShowCategories] = useState(true);
   const [menus, setMenus] = useState([
     {
       name: "Home",
@@ -139,6 +141,37 @@ const Header = () => {
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="row hero__categories_container">
+          <div className="col-lg-3 hero__categories">
+            <div
+              className="hero__categories__all"
+              onClick={() => setShowCategories(!isShowCategories)}
+            >
+              <AiOutlineMenu /> List Product
+            </div>
+
+            <ul className={isShowCategories ? "" : "hidden"}>
+              <li>
+                <Link to={"#"}>Fresh Meat</Link>
+              </li>
+              <li>
+                <Link to={"#"}>Vegetable</Link>
+              </li>
+              <li>
+                <Link to={"#"}>Fruit Juice</Link>
+              </li>
+              <li>
+                <Link to={"#"}>Fruit</Link>
+              </li>
+              <li>
+                <Link to={"#"}>seafood</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="col-lg-9">Phai</div>
         </div>
       </div>
     </>
