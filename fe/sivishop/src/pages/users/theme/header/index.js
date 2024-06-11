@@ -6,6 +6,7 @@ import {
   AiOutlineLinkedin,
   AiOutlineMail,
   AiOutlineMenu,
+  AiOutlinePhone,
   AiOutlineShoppingCart,
   AiOutlineTwitter,
   AiOutlineUser,
@@ -171,7 +172,42 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <div className="col-lg-9">Phai</div>
+          <div className="col-lg-9 hero__search_container">
+            <div className="hero__search">
+              <div className="hero__search_form">
+                <form>
+                  <input type="text" placeholder="Enter keywords.." />
+                  <button type="submit" className="side-btn">
+                    Search
+                  </button>
+                </form>
+              </div>
+              <div className="hero__search_phone">
+                <div className="hero__search__phone_icon">
+                  <AiOutlinePhone />
+                </div>
+                <div className="hero__search__phone_text">
+                  <p>0867.898.090</p>
+                  <span>24/7 Support</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="hero__item">
+              <div className="hero__text">
+                <span>Fresh Fruit</span>
+                <h2>
+                  Vegetables
+                  <br />
+                  100% Clean
+                </h2>
+                <p>Free delivery</p>
+                <Link to="" className="primary-btn">
+                  Buy Now
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
